@@ -1,0 +1,140 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: Aboreto;
+    src: url(../../fonts/Aboreto-Regular.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    src: url(../../fonts/Ubuntu-Regular.ttf);
+}
+
+nav {
+    /* background-image: linear-gradient(90deg, #2ca58d 0%, #048f73 100%); */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 25px;
+    /* background-image: url("../pages/images/background-image.png"); */
+    /* background-color: #222; */
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: grayscale(1); */
+    position: absolute;
+    width: 100%;
+}
+
+.logo {
+    justify-self: start;
+    font-size: 2rem;
+    margin: 0.5rem 2rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--accent);
+}
+
+ul {
+    list-style: none;
+    font-family: "Aboreto", cursive;
+
+    display: flex;
+    justify-content: flex-end;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    text-align: center;
+    width: 70vw;
+    z-index: 2;
+}
+
+li {
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 200ms ease-out;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+}
+
+li:hover {
+    background-color: white;
+    box-shadow: #666 1px 1px 5px;
+    color: var(--secondary);
+}
+
+.active-link {
+    background-color: white;
+    box-shadow: #666 1px 1px 5px;
+    color: var(--secondary);
+}
+
+.active-link a {
+    color: var(--secondary);
+}
+
+li:hover a {
+    color: var(--secondary);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: all 200ms ease-out;
+}
+
+.btn {
+    background-color: var(--secondary);
+}
+
+.btn:hover {
+    background-color: var(--accent);
+}
+
+.active-link.btn {
+    background-color: var(--accent);
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 860px) {
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        background-image: linear-gradient(90deg, #2ca58d 0%, #048f73 100%);
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    nav ul.menu-active {
+        left: 0;
+        opacity: 1;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 50%);
+        cursor: pointer;
+    }
+
+    .fa-xmark {
+        margin-right: 0.2em;
+    }
+}
