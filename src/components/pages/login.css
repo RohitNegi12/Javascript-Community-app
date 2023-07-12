@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+.container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+
+.left-half {
+    /* background-color: rgba(255, 105, 180, 0.3); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.right-half {
+    /* background-color: var(--accent); */
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 20px 80px;
+}
+
+.left-half > div {
+    display: flex;
+    column-gap: 50px;
+}
+
+.caption p:nth-child(1) {
+    color: #fffdf7;
+}
+.caption p:nth-child(2) {
+    color: #ffd166;
+}
+.caption p:nth-child(3) {
+    color: #ef476f;
+}
+
+img[name="login-logo"] {
+    margin-top: 50px;
+    min-width: 300px;
+    width: 400px;
+}
+
+.caption {
+    max-width: 300px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    align-self: flex-end;
+    line-height: 4rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #fffdf7; */
+    height: 100%;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+
+    background-image: linear-gradient(45deg, #1a1632b1, #0d0633aa);
+    color: var(--accent);
+    border: solid 1px #335;
+    box-shadow: #333 5px 5px 15px;
+}
+
+.login-form > form > h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.login-form > form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 50%;
+}
+
+.login-form > form > input {
+    background-color: #fffdf7;
+    border: none;
+    border-bottom: 2px solid #ef476f;
+    min-width: 250px;
+
+    font-size: 1.2rem;
+    font-family: "Ubuntu", sans-serif;
+    padding: 0.75rem;
+    margin: 0.5rem;
+}
+
+.login-form > form > input[type="submit"] {
+    background-color: #ffd166;
+    border: none;
+    font-family: "Aboreto", cursive;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #ecbc4e;
+}
+
+.login-form > form > #field:focus {
+    background-color: #e5e3df;
+}
+
+.login-form a {
+    color: #4877e2;
+    font-weight: 500;
+}
+
+@media screen and (max-size: 1010px) {
+}
